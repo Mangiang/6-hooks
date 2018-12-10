@@ -1,4 +1,4 @@
-Todo App
+Todo App - Arthur JOLY - joly_p
 
 1. use `useState` and `onClick` to toggle the `FavouriteToggle` display
 2. add some logic to your `Post` component: when clicked it must display the content of `data.body`, when clicked again it must return to its initial state
