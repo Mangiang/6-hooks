@@ -16,16 +16,12 @@ const Post = ({data}) => {
                 cursor: 'pointer'
             }}
         >
-            <span style={{fontWeight: '900'}}
-                  onClick={() => setExpanded(!isExpanded)}>
-                {data.title}
-            </span>
-
-            <ScoreCounter/>
-
-            <FavouriteToggle style={{float: 'right'}}/>
-
+            <div onClick={() => setExpanded(!isExpanded)} >
+                <span style={{fontWeight: '900'}}> {data.title} </span>
+                <FavouriteToggle style={{float: 'right'}}/>
+            </div>
             <div style={{display: isExpanded ? "block" : "none"}}>{data.body}</div>
+            <ScoreCounter/>
         </li>
     )
 };
