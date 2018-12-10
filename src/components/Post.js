@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 import FavouriteToggle from './FavouriteToggle';
+import ScoreCounter from './ScoreCounter';
 
 const Post = ({data}) => {
     const [isExpanded, setExpanded] = useState(false);
 
     return (
         <li
-            onClick={() => setExpanded(!isExpanded)}
             style={{
                 backgroundColor: 'white',
                 color: '#333',
@@ -16,7 +16,12 @@ const Post = ({data}) => {
                 cursor: 'pointer'
             }}
         >
-            <span style={{fontWeight: '900'}}>{data.title}</span>
+            <span style={{fontWeight: '900'}}
+                  onClick={() => setExpanded(!isExpanded)}>
+                {data.title}
+            </span>
+
+            <ScoreCounter/>
 
             <FavouriteToggle style={{float: 'right'}}/>
 
